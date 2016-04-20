@@ -16,10 +16,7 @@ ALWAYS_AVAILABLE_VARS = {
 # Setup Jinja2
 #
 
-jinja_env = jinja2.Environment(
-    loader=jinja2.PackageLoader('app', 'templates'),
-    extensions=['jinja2.ext.i18n']
-)
+jinja_env = jinja2.Environment(loader=jinja2.PackageLoader('app', 'templates'))
 
 def render(template, variables):
     """
@@ -42,7 +39,7 @@ SOME_OTHER_TEMPLATE = jinja_env.get_template('some_other_template.html')
 
 
 #
-# Setup Flask server
+# Setup Flask server and routes + handlers
 #
 
 app = Flask(__name__, static_folder='static')
