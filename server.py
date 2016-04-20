@@ -10,7 +10,7 @@ STATIC_URL = '/static/'
 
 
 ALWAYS_AVAILABLE_VARS = {
-    'STATIC': STATIC_URL
+    'STATIC_URL': STATIC_URL
 }
 
 #
