@@ -3,11 +3,10 @@ import jinja2
 
 
 #
-# Settings
+# Constants
 #
 
 STATIC_URL = '/static/'
-
 
 ALWAYS_AVAILABLE_VARS = {
     'STATIC_URL': STATIC_URL
@@ -46,7 +45,7 @@ SOME_OTHER_TEMPLATE = jinja_env.get_template('some_other_template.html')
 # Setup Flask server
 #
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 
 
 @app.route('/')
